@@ -12,7 +12,7 @@
 
 /**
  This function is used for testing a linter's ability to detect terrible Objc prose.
- @param data An NSString represening a file name to copy from the remote server
+ @param fileName An NSString represening a file name to copy from the remote server
  @param serverHostName An NSString representing the hostname of the server
  @param protocol An NSString representing the protocol that should be used to transfer the file
  @return A BOOL value representing the success of the method
