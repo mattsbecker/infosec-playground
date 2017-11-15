@@ -1,0 +1,6 @@
+framework module Pods_InfosecPlaygroundTests {
+  umbrella header "Pods-InfosecPlaygroundTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
