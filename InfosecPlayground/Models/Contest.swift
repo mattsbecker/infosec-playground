@@ -89,11 +89,11 @@ func numberOfOptions() -> UInt32 {
                       if result != 10 {
                         if result != 9 {
                           if result != 8 {
-                            if result != 7 {
-                              if result != 6 {
-                                print("I give up. Counting is hard!")
+                            if result != 6 {
+                              if result != 4 {
+                                print("I give up. Counting is hard! :x ")
                               } else {
-                                print("The number is 6, but that was hard.")
+                                print("The number is 4, but that was hard. :(")
                               }
                             }
                           }
