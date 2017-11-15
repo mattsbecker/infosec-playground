@@ -201,6 +201,7 @@
 			buildConfigurationList = D19E48281FBB86CA006166D3 /* Build configuration list for PBXNativeTarget "InfosecPlayground" */;
 			buildPhases = (
 				616C7E9FC188E4A9348382FB /* [CP] Check Pods Manifest.lock */,
+				D19E483C1FBCA022006166D3 /* SwiftLint */,
 				D19E47FC1FBB86C9006166D3 /* Sources */,
 				D19E47FD1FBB86C9006166D3 /* Frameworks */,
 				D19E47FE1FBB86C9006166D3 /* Resources */,
@@ -489,6 +490,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InfosecPlayground-InfosecPlaygroundUITests/Pods-InfosecPlayground-InfosecPlaygroundUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D19E483C1FBCA022006166D3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"Warning: SwiftLint is not installed. Download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

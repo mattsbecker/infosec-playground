@@ -9,21 +9,26 @@
 import UIKit
 
 protocol ContestOptionAssignable {
-    var optionTitle: String { get set }
-    var optionSubtitle: String { get set }
+  var optionTitle: String { get set }
+  var optionSubtitle: String { get set }
 }
 
 protocol ContestOptionSelectable {
-    var isSelected: Bool { get set }
+  var isSelected: Bool { get set }
 }
 
 class ContestOption: ContestOptionAssignable, ContestOptionSelectable {
-    var optionTitle: String
-    var optionSubtitle: String
-    var isSelected: Bool = false
-    
-    init(title theTitle: String, subtitle theSubtitle: String) {
-        optionTitle = theTitle
-        optionSubtitle = theSubtitle
-    }
+  var optionTitle: String
+  var optionSubtitle: String
+  var isSelected: Bool = false
+  
+ /// Default initializer for a ContestOption.
+ ///
+ /// - Parameters:
+ ///   - title: A String representing the `ContestOption`'s main title.
+ ///   - subtitle: A String representing the `ContestOption`'s subtitle
+ init(title contestOptionTitle: String, subtitle contestOptionSubtitle: String) {
+    optionTitle = contestOptionTitle
+    optionSubtitle = contestOptionSubtitle
+  }
 }
