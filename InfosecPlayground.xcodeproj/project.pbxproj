@@ -6,6 +6,20 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D19E48441FBCBFB3006166D3 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D19E48451FBCBFB3006166D3 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				D19E48481FBCBFDE006166D3 /* OCLint */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8C81D3D079827B6D93B9FF93 /* Pods_InfosecPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F82D5E97FA3C0C35B8A534 /* Pods_InfosecPlayground.framework */; };
 		A5D5A89D19D06E97BF98D075 /* Pods_InfosecPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5835D4FDFAFC7FAAB6A373 /* Pods_InfosecPlaygroundTests.framework */; };
@@ -23,6 +37,8 @@
 		D19E48371FBB91C0006166D3 /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E48351FBB91C0006166D3 /* Contest.swift */; };
 		D19E483A1FBC7649006166D3 /* ContestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E48391FBC7649006166D3 /* ContestController.swift */; };
 		D19E483B1FBC7649006166D3 /* ContestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19E48391FBC7649006166D3 /* ContestController.swift */; };
+		D19E48411FBCA940006166D3 /* VTMFileTransferUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D19E48401FBCA940006166D3 /* VTMFileTransferUtils.m */; };
+		D19E48421FBCA940006166D3 /* VTMFileTransferUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D19E48401FBCA940006166D3 /* VTMFileTransferUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +83,10 @@
 		D19E48321FBB91B1006166D3 /* ContestOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestOption.swift; sourceTree = "<group>"; };
 		D19E48351FBB91C0006166D3 /* Contest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 		D19E48391FBC7649006166D3 /* ContestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestController.swift; sourceTree = "<group>"; };
+		D19E483D1FBCA940006166D3 /* InfosecPlayground-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfosecPlayground-Bridging-Header.h"; sourceTree = "<group>"; };
+		D19E483E1FBCA940006166D3 /* InfosecPlaygroundTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfosecPlaygroundTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D19E483F1FBCA940006166D3 /* VTMFileTransferUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTMFileTransferUtils.h; sourceTree = "<group>"; };
+		D19E48401FBCA940006166D3 /* VTMFileTransferUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTMFileTransferUtils.m; sourceTree = "<group>"; };
 		FD5835D4FDFAFC7FAAB6A373 /* Pods_InfosecPlaygroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfosecPlaygroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +166,7 @@
 		D19E48021FBB86C9006166D3 /* InfosecPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				D19E48431FBCA945006166D3 /* File Transfer */,
 				D19E48381FBC7637006166D3 /* Controllers */,
 				D19E48311FBB9192006166D3 /* Models */,
 				D19E48031FBB86C9006166D3 /* AppDelegate.swift */,
@@ -154,6 +175,8 @@
 				D19E480A1FBB86C9006166D3 /* Assets.xcassets */,
 				D19E480C1FBB86C9006166D3 /* LaunchScreen.storyboard */,
 				D19E480F1FBB86C9006166D3 /* Info.plist */,
+				D19E483D1FBCA940006166D3 /* InfosecPlayground-Bridging-Header.h */,
+				D19E483E1FBCA940006166D3 /* InfosecPlaygroundTests-Bridging-Header.h */,
 			);
 			path = InfosecPlayground;
 			sourceTree = "<group>";
@@ -191,6 +214,15 @@
 				D19E48391FBC7649006166D3 /* ContestController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D19E48431FBCA945006166D3 /* File Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				D19E483F1FBCA940006166D3 /* VTMFileTransferUtils.h */,
+				D19E48401FBCA940006166D3 /* VTMFileTransferUtils.m */,
+			);
+			path = "File Transfer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +303,12 @@
 				TargetAttributes = {
 					D19E47FF1FBB86C9006166D3 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					D19E48131FBB86CA006166D3 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D19E47FF1FBB86C9006166D3;
 					};
@@ -282,6 +316,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D19E47FF1FBB86C9006166D3;
+					};
+					D19E48441FBCBFB3006166D3 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -301,6 +339,7 @@
 				D19E47FF1FBB86C9006166D3 /* InfosecPlayground */,
 				D19E48131FBB86CA006166D3 /* InfosecPlaygroundTests */,
 				D19E481E1FBB86CA006166D3 /* InfosecPlaygroundUITests */,
+				D19E48441FBCBFB3006166D3 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -505,6 +544,20 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"Warning: SwiftLint is not installed. Download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		D19E48481FBCBFDE006166D3 /* OCLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = OCLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -z \"${SCHEME+x}\" ]\nthen\nexport SCHEME=\"${PROJECT_NAME}\"\nfi\n\nif [ -z \"${WORKSPACE+x}\" ]\nthen\nexport WORKSPACE=\"${PROJECT_NAME}.xcworkspace\"\nfi\n\ncd \"${SOURCE_ROOT}\"\n\n# Check if xctool and oclint are installed\nif ! which -s xctool\nthen\necho 'error: xctool not found, install e.g. with homebrew'\nexit 1\nfi\n\nif ! which -s oclint-json-compilation-database\nthen\necho 'error: OCLint not installed, install e.g. with homebrew cask'\nexit 2\nfi\n\n# Cleanup before building\nrm -f compile_commands.json\nxctool -workspace \"${WORKSPACE}\" -scheme \"${SCHEME}\" clean > /dev/null\n\n# Build and analyze\n# OCLint Rule Index: http://docs.oclint.org/en/dev/rules/index.html\nxctool -workspace \"${WORKSPACE}\" -scheme \"${SCHEME}\" -reporter json-compilation-database:compile_commands.json build\noclint-json-compilation-database -e Pods -- -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 \\\n-disable-rule=InvertedLogic \\\n-disable-rule=UnusedMethodParameter \\\n-disable-rule=LongVariableName \\\n-disable-rule=ShortVariableName \\\n-disable-rule=UselessParentheses \\\n-disable-rule=IvarAssignmentOutsideAccessorsOrInit | sed 's/\\(.*\\.\\m\\{1,2\\}:[0-9]*:[0-9]*:\\)/\\1 warning:/'\n\n# Final cleanup\nrm -f compile_commands.json";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -514,6 +567,7 @@
 			files = (
 				D19E48361FBB91C0006166D3 /* Contest.swift in Sources */,
 				D19E48331FBB91B1006166D3 /* ContestOption.swift in Sources */,
+				D19E48411FBCA940006166D3 /* VTMFileTransferUtils.m in Sources */,
 				D19E48061FBB86C9006166D3 /* MainViewController.swift in Sources */,
 				D19E483A1FBC7649006166D3 /* ContestController.swift in Sources */,
 				D19E48041FBB86C9006166D3 /* AppDelegate.swift in Sources */,
@@ -524,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19E48421FBCA940006166D3 /* VTMFileTransferUtils.m in Sources */,
 				D19E48191FBB86CA006166D3 /* InfosecPlaygroundTests.swift in Sources */,
 				D19E48341FBB91B1006166D3 /* ContestOption.swift in Sources */,
 				D19E483B1FBC7649006166D3 /* ContestController.swift in Sources */,
@@ -686,12 +741,15 @@
 			baseConfigurationReference = A0E1679421082A356A132CD7 /* Pods-InfosecPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P47XAY9AQ3;
 				INFOPLIST_FILE = InfosecPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.votem.InfosecPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfosecPlayground/InfosecPlayground-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -702,12 +760,14 @@
 			baseConfigurationReference = 9DBD575D7D851F5BF1187C0C /* Pods-InfosecPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P47XAY9AQ3;
 				INFOPLIST_FILE = InfosecPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.votem.InfosecPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfosecPlayground/InfosecPlayground-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -719,12 +779,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P47XAY9AQ3;
 				INFOPLIST_FILE = InfosecPlaygroundTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.votem.InfosecPlaygroundTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfosecPlayground/InfosecPlaygroundTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfosecPlayground.app/InfosecPlayground";
@@ -737,12 +800,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P47XAY9AQ3;
 				INFOPLIST_FILE = InfosecPlaygroundTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.votem.InfosecPlaygroundTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InfosecPlayground/InfosecPlaygroundTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InfosecPlayground.app/InfosecPlayground";
@@ -783,6 +848,24 @@
 			};
 			name = Release;
 		};
+		D19E48461FBCBFB3006166D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P47XAY9AQ3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D19E48471FBCBFB3006166D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P47XAY9AQ3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -818,6 +901,15 @@
 			buildConfigurations = (
 				D19E482F1FBB86CA006166D3 /* Debug */,
 				D19E48301FBB86CA006166D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D19E48451FBCBFB3006166D3 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D19E48461FBCBFB3006166D3 /* Debug */,
+				D19E48471FBCBFB3006166D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

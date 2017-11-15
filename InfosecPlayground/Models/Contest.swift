@@ -32,6 +32,8 @@ struct Contest: Contestable {
     subtitle = contestSubtitle
     instructions = contestInstructions
     options = optionsForContest()
+    // Call the bad function, but don't do anything with it's return value. Avoid this grossness!
+    _ = badOptionsForContest()
   }
 
   /// Provides the selectable options for a this contest
@@ -46,5 +48,20 @@ struct Contest: Contestable {
     let joffrey = ContestOption(title: "Joffrey Baratheon",
                                 subtitle: "Inconceivably bad guy with a track record of tyranny.")
     return [ned, joffrey]
+  }
+  
+  /// A really ugly function that does a lot of things wrong. This returns an array `AnyObject`s that are
+  /// casted from a defined type, that are force-unwrapped and unchecked prior to adding them to an array.
+  /// - Returns: A bad array that will stands a high chance of including bad data.
+  func badOptionsForContest() -> [AnyObject] {
+    let ned = ContestOption(title: "Eddard Stark",
+                            subtitle: "Overall good guy with a track record of nobility.")
+    // Create Joffrey for testing
+    let joffrey = ContestOption(title: "Joffrey Baratheon",
+                                subtitle: "Inconceivably bad guy with a track record of tyranny.")
+    var nedString = ned as? AnyObject
+    var joffreyString = joffrey as? AnyObject
+    
+    return [nedString!, joffreyString!]
   }
 }
